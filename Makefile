@@ -4,20 +4,20 @@
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
-# 
+#
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qt5
-PKG_VERSION:=5.7.1
-PKG_RELEASE:=1
-PKG_MD5SUM:=031fb3fd0c3cc0f1082644492683f18d
+PKG_VERSION:=5.8
+PKG_RELEASE:=0
+PKG_MD5SUM:=a9f2494f75f966e2f22358ec367d8f41
 
-PKG_SOURCE:=qt-everywhere-opensource-src-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://download.qt-project.org/official_releases/qt/5.7/$(PKG_VERSION)/single
-PKG_BUILD_DIR=$(BUILD_DIR)/qt-everywhere-opensource-src-$(PKG_VERSION)
+PKG_SOURCE:=qt-everywhere-opensource-src-$(PKG_VERSION).$(PKG_RELEASE).tar.gz
+PKG_SOURCE_URL:=http://download.qt-project.org/archive/qt/$(PKG_VERSION)/$(PKG_VERSION).$(PKG_RELEASE)/single
+PKG_BUILD_DIR=$(BUILD_DIR)/qt-everywhere-opensource-src-$(PKG_VERSION).$(PKG_RELEASE)
 PKG_BUILD_PARALLEL:=1
-PKG_USE_MIPS16:=0 
+PKG_USE_MIPS16:=0
 PKG_BUILD_DEPENDS:=+libstdcpp
 
 include $(INCLUDE_DIR)/package.mk
